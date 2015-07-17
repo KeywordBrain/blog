@@ -1,0 +1,8 @@
+- @article = current_article
+
+= wrap_layout :layout do
+
+  %article.article{ id: @article.id }
+    %h1= @article.title
+
+    = yield

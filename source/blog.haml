@@ -1,0 +1,12 @@
+---
+title: All Articles
+description: KeywordBrain Insights Blog
+---
+
+%span Articles
+
+- blog('blog').articles.each do |article|
+
+  %article.article{ id: article.id }
+    %h1<
+      %a{ href: article.url}= article.title

@@ -1,0 +1,17 @@
+!!!
+%html{ lang: 'en' }
+
+  %head
+    = partial 'meta'
+    = stylesheet_link_tag 'app'
+
+  %body<
+
+    .site-wrap
+      =# partial 'header'
+
+      = yield
+
+      =# javascript_include_tag 'app'
+
+      =# partial 'footer'

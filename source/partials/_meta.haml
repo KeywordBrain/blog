@@ -1,0 +1,13 @@
+%meta{ charset: 'UTF-8' }
+%meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+%meta{ name: 'robots', content: 'index,follow' }
+
+%link{ href: current_page.canonical, rel: 'canonical' }
+
+-# Window title
+- if current_page.data.title.present?
+  %title #{current_page.data.title.strip} « #{config[:page_config][:name]}
+
+-# Meta description
+- if current_page.data.description.present?
+  %meta{ name: 'description', content: current_page.data.description }
