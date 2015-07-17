@@ -21,6 +21,7 @@ set :haml, ugly: true
 set :page_config, {
   name: 'KeywordBrain',
   url: 'https://keywordbrain.com',
+  prefix: PREFIX
 }
 
 activate :blog do |blog|
@@ -31,6 +32,11 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
+
+# Mount sitemap inside blog directory and don’t build original file
+proxy "/#{PREFIX}/sitemap.xml", '/sitemap.xml'
+page "/#{PREFIX}/sitemap.xml", layout: false
+ignore '/sitemap.xml'
 
 module KeywordBrainPatches
   # Instance methods for article and pages

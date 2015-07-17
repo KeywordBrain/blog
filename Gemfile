@@ -10,3 +10,7 @@ gem 'redcarpet',            '3.2.2'
 # Use susy & breakpoint as Sass dependencies
 gem 'susy',                 '2.2.2'
 gem 'breakpoint',           '2.5.0'
+
+
+# Use builder to generate xml files (sitemap, RSS feed)
+gem 'builder',              '3.2.2'

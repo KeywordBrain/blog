@@ -53,3 +53,4 @@ The site contains smart defaults for some things, including:
 - **robot tags** set to `index,follow`
 - **meta description** and **window title** are only set if present,
   allowing search engines to dynamically set them based on content
+- a **sitemap** containing all articles
