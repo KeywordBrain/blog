@@ -82,6 +82,9 @@ configure :build do
   activate :minify_css
   activate :asset_hash
 
+  # Only load DISQUS during build
+  set :comments, true
+
   ignore '.DS_Store'
   ignore Regexp.new(/readme.md/i)
 end

@@ -13,3 +13,4 @@
     = yield
 
     = partial 'article_footer', locals: { article: @article }
+    = partial 'comments' if config[:comments]
