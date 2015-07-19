@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
+
 # Core
 # use middleman 3.3.13 from Github because of a bug related to Webrick in Ruby
 # https://github.com/middleman/middleman/issues/1430#issuecomment-121892300
