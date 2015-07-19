@@ -1,5 +1,7 @@
 # KeywordBrain Insights Blog
 
+[![Circle CI](https://circleci.com/gh/KeywordBrain/blog/tree/master.svg?style=svg)](https://circleci.com/gh/KeywordBrain/blog/tree/master)
+
 This repository contains the code and content to create the KeywordBrain
 blog at https://keywordbrain.com/blog/
 
