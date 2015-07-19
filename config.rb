@@ -48,6 +48,13 @@ module KeywordBrainPatches
     def canonical
       @app.settings.page_config[:url] + (data.canonical || url)
     end
+
+    def author
+      author = @app.data.authors[data.author]
+      raise "Author '#{data.author}' not found" unless author
+
+      author
+    end
   end
 end
 
@@ -56,6 +63,16 @@ helpers do
   def partial(partial, *args)
     partial.prepend('partials/')
     super
+  end
+
+  def friendly_date(date)
+    time_format = if date.year == Time.now.year
+      "%B %d."
+    else
+      "%B %d, %Y."
+    end
+
+    date.strftime(time_format)
   end
 end
 

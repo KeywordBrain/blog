@@ -3,10 +3,18 @@ title: All Articles
 description: KeywordBrain Insights Blog
 ---
 
-%span Articles
+.content
+  - blog('blog').articles.each_with_index do |article|
 
-- blog('blog').articles.each do |article|
+    %article.article.article--list{ id: article.id }
+      %header
+        %h1.article__title<
+          %a{ href: article.url }= article.title
 
-  %article.article{ id: article.id }
-    %h1<
-      %a{ href: article.url}= article.title
+      %p.article__summary= article.data.summary
+
+      .article__meta
+        by
+        %strong= article.author['name']
+        on
+        %time{ datetime: article.date.strftime('%Y-%m-%d') }= friendly_date(article.date)

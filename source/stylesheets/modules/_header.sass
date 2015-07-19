@@ -1,0 +1,23 @@
+.header
+  +font-stack-mono
+  font-weight: bold
+  border-top: 3px solid #f1c40f
+  height: 40px
+  margin-bottom: $padding * 2.5
+  padding: $gutter 0 0 0
+
+  +breakpoint($bp-small)
+    margin-bottom: 0
+
+  .wrap
+    border-bottom: 1px solid #ddd
+
+  .header__title
+    padding-bottom: 1px
+
+    a
+      color: #222931
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
