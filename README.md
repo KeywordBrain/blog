@@ -21,7 +21,7 @@ site on the fly so changes to content are reflected immediately.
 ### Build for production
 
 ```bash
-$ bundle exec middeman build
+$ bundle exec middleman build
 ```
 
 That will build the site and put it in `./build/`.
@@ -41,13 +41,19 @@ file specifies metadata:
 
 ```yaml
 title: Article Title which will be the <H1>
+author: david
 description: >
   The meta description goes here
+summary: >
+  A small intro paragraph that is shown in article lists
+  like the blog homepage
 ```
+
+Supported authors are `david` and `max`, see `data/authors.yml`.
 
 ## Smart defaults
 
-The site contains smart defaults for some things, including:
+The site uses smart defaults for some things, including:
 
 - **canonicals** point to the articles URL
 - **robot tags** set to `index,follow`

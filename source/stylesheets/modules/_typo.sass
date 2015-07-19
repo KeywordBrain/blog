@@ -1,0 +1,24 @@
+@mixin font-stack-base
+  font: 400 14px/22px 'Merriweather', Georgia, serif
+  color: #222931
+
+@mixin font-stack-heading
+  font: 900 34px/44px 'Merriweather', Georgia, serif
+  color: #222
+
+@mixin font-stack-mono
+  font-family: Inconsolata, Courier, monospace
+  font-weight: 400
+
+@mixin font-stack-sans
+  font: 900 14px/22px 'Lato', 'Helvetica Neue',  Helvetica, Arial, sans-serif
+
+h1, h2, h3, h4, h5, h6
+  +font-stack-heading
+
+h2, h3, h4, h5, h6
+  font-size: 26px
+  margin: 26px 0 -10px 0
+
+h3
+  font-size: 22px

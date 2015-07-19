@@ -1,0 +1,7 @@
+%footer.article__footer
+  %div
+    written by
+    %strong= article.author['name']
+
+  %div.author-twitter
+    %a{ href: "https://twitter.com/#{article.author['twitter']}" } @#{article.author['twitter']}

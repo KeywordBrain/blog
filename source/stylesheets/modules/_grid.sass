@@ -1,0 +1,14 @@
+// only and default Susy grid, settings inside _base.scss
+.wrap
+  +container(700px)
+
+  // make sure content doesn’t tough edge of screen on smaller screens
+  +breakpoint($bp-medium)
+    +side-margin($padding)
+
+  +breakpoint($bp-small)
+    +side-margin($gutter)
+
+// .content is the main grid column
+.content
+  +span(12)

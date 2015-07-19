@@ -5,13 +5,12 @@
     = partial 'meta'
     = stylesheet_link_tag 'app'
 
-  %body<
+  %body
+    = partial 'webfont_loader'
 
-    .site-wrap
-      =# partial 'header'
+    .site-wrap<
+      = partial 'header'
 
-      = yield
+      .wrap= yield
 
-      =# javascript_include_tag 'app'
-
-      =# partial 'footer'
+      = partial 'footer'

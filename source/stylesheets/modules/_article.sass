@@ -1,0 +1,108 @@
+// the main article wrapper
+.article
+  font-size: 16px
+  line-height: 25px
+  margin-bottom: $padding*2
+
+  .article__title
+    font-size: 34px
+    margin: $padding 0
+
+    +breakpoint($bp-small)
+      font-size: 30px
+      line-height: 40px
+
+  .article__meta
+    +font-stack-sans
+    color: #c3322f
+    margin-bottom: $padding
+    font-weight: 400
+
+  .article__footer
+    text-align: center
+    font-size: 1.2em
+    margin-top: $padding * 3
+
+    &:before
+      content: ""
+      width: 150px
+      height: 3px
+      background: #caccc9
+      display: block
+      margin: 0 auto $padding auto
+
+    .author-twitter
+      font-size: 0.9em
+      margin-top: $gutter
+
+  // the article wrap for list views like the blog homepage
+  &.article--list
+    margin-bottom: $padding * 2
+
+    .article__title
+      +font-stack-heading
+      font-size: 25px
+      line-height: 32px
+      font-weight: bold
+      margin-bottom: 7px
+
+      a
+        text-decoration: none
+        color: #222931
+
+        &:hover
+          text-decoration: underline
+
+    .article__summary
+      font-style: italic
+      font-size: 1.1em
+      margin: 0 0 5px 0
+
+  // general content element styles
+  a
+    color: #c3322f
+    &:hover
+      text-decoration: none
+
+  p
+    margin: 15px 0
+
+  blockquote
+    font-style: italic
+    font-size: 1.8em
+    line-height: 1.2em
+    border-left: 3px solid #c3322f
+    margin-left: 0
+    padding-left: $padding
+
+    // small hack to highlight authors in blockquote, should be using
+    // <cite> instead
+    span
+      font-size: 0.6em
+
+  code, kbd
+    +font-stack-mono
+    font-size: 0.8em
+    white-space: nowrap
+
+  p code, li code, p kbd, li kbd
+    +border-radius(15px)
+    color: #333
+    background: #f8f8f8
+    border: 1px solid #d2d2d2
+    padding: 1px 4px
+
+  // permalink specific styles
+  &.article--single
+    // intro paragraph
+    > p:first-of-type
+      font-style: italic
+      font-size: 1.1em
+
+      &:first-letter
+        font-style: italic
+        font-size: 2.7em
+        line-height: 1
+        float: left
+        padding: 0 6px
+        text-transform: capitalize

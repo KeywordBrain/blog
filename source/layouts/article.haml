@@ -2,7 +2,14 @@
 
 = wrap_layout :layout do
 
-  %article.article{ id: @article.id }
-    %h1= @article.title
+  %article.article.article--single.content{ id: @article.id }
+    %header
+      %h1.article__title= @article.title
+      .article__meta
+        %strong= @article.author['name']
+        wrote this on
+        %time{ datetime: @article.date.strftime('%Y-%m-%d') }= friendly_date(@article.date)
 
     = yield
+
+    = partial 'article_footer', locals: { article: @article }
