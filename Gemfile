@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 # Core
-gem 'middleman',            '3.3.12'
+# use middleman 3.3.13 from Github because of a bug related to Webrick in Ruby
+# https://github.com/middleman/middleman/issues/1430#issuecomment-121892300
+gem 'middleman', github: 'middleman/middleman', branch: 'v3-stable'
 gem 'middleman-blog',       '3.5.3'
 
 # Use redcarpet to parse markdown
