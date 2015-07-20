@@ -4,7 +4,8 @@ description: KeywordBrain Insights Blog
 ---
 
 .content
-  - blog('blog').articles.each_with_index do |article|
+  -# the blog is called 'blog', see config.rb
+  - blog('blog').articles.each do |article|
 
     %article.article.article--list{ id: article.id }
       %header
@@ -13,7 +14,7 @@ description: KeywordBrain Insights Blog
 
       %p.article__summary= article.data.summary
 
-      .article__meta
+      %footer.article__meta<
         by
         %strong= article.author['name']
         on

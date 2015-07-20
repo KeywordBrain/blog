@@ -5,12 +5,25 @@
   %article.article.article--single.content{ id: @article.id }
     %header
       %h1.article__title= @article.title
+
       .article__meta
         %strong= @article.author['name']
         wrote this on
         %time{ datetime: @article.date.strftime('%Y-%m-%d') }= friendly_date(@article.date)
 
-    = yield
+    = yield # article body will be rendered here
 
-    = partial 'article_footer', locals: { article: @article }
-    = partial 'comments' if config[:comments]
+    %footer.article__footer
+      %div
+        written by
+        %strong= @article.author['name']
+
+      %div.author-twitter
+        - twitter_name = @article.author['twitter']
+        %a{ href: "https://twitter.com/#{twitter_name}" } @#{twitter_name}
+
+    -# show a placeholder box in development to see where the comments will go
+    - if config[:comments]
+      = partial 'comments'
+    - else
+      = partial 'comments_dev'
