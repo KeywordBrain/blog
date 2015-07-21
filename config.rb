@@ -1,8 +1,8 @@
 PREFIX = 'blog'
 
-set :css_dir,             'stylesheets'
-set :js_dir,              'javascripts'
-set :images_dir,          'images'
+set :css_dir,             PREFIX + '/stylesheets'
+set :js_dir,              PREFIX + '/javascripts'
+set :images_dir,          PREFIX + '/images'
 
 set :markdown_engine,     :redcarpet
 
@@ -33,10 +33,7 @@ end
 
 activate :directory_indexes
 
-# Mount sitemap inside blog directory and don’t build original file
-proxy "/#{PREFIX}/sitemap.xml", '/sitemap.xml'
 page "/#{PREFIX}/sitemap.xml", layout: false
-ignore '/sitemap.xml'
 
 module KeywordBrainPatches
   # Instance methods for article and pages
