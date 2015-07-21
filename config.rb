@@ -3,6 +3,7 @@ PREFIX = 'blog'
 set :css_dir,             PREFIX + '/stylesheets'
 set :js_dir,              PREFIX + '/javascripts'
 set :images_dir,          PREFIX + '/images'
+set :partials_dir,        'partials'
 
 set :markdown_engine,     :redcarpet
 
@@ -56,12 +57,6 @@ module KeywordBrainPatches
 end
 
 helpers do
-  # Add the partial folder to the name when including it
-  def partial(partial, *args)
-    partial.prepend('partials/')
-    super
-  end
-
   def friendly_date(date)
     time_format = if date.year == Time.now.year
       "%B %d."
