@@ -1,3 +1,9 @@
+machine:
+  services:
+    - docker
+  environment:
+    IMAGE_NAME: keywordbrain/blog
+
 compile:
   override:
     - 'true'
@@ -5,3 +11,11 @@ compile:
 test:
   override:
     - bundle exec middleman build
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker build -t $IMAGE_NAME .
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push $IMAGE_NAME
