@@ -5,6 +5,8 @@
     = partial 'meta'
     = stylesheet_link_tag 'app'
 
+    = partial 'analytics' if config[:analytics]
+
   %body
     = partial 'webfont_loader'
 

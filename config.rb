@@ -76,6 +76,7 @@ configure :build do
 
   # Only load DISQUS during build
   set :comments, true
+  set :analytics, true
 
   ignore '.DS_Store'
   ignore Regexp.new(/readme.md/i)
