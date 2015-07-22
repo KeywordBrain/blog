@@ -84,10 +84,10 @@ you give to it. We call it `Query` by convention.
 
 ## Fields on the root type are your “public API”.
 
-_Update:_ [@dshafer] expanded the GraphQL README to better explain this
+_Update:_ [@dschafer] expanded the GraphQL README to better explain this
 in [PR #66][pr].
 
-  [@dshafer]: https://github.com/dschafer
+  [@dschafer]: https://github.com/dschafer
   [pr]: https://github.com/facebook/graphql/pull/66
 
 The only way to access or mutate data is by accessing fields of the
@@ -171,9 +171,9 @@ and [@mxlje] on Twitter.
   [@davidpfahler]: https://twitter.com/davidpfahler
   [@mxlje]: https://twitter.com/mxlje
 
-We’d also like to thank [Dan Shafer][dshafer] and everybody in the
+We’d also like to thank [Dan Schafer][dschafer] and everybody in the
 [GraphQL Slack channel][slack] for their feedback on this post and
 answering questions about the nitty gritty details.
 
-  [dshafer]: https://github.com/dshafer
+  [dschafer]: https://github.com/dschafer
   [slack]: https://graphql-slack.herokuapp.com
