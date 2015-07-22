@@ -59,6 +59,19 @@
       margin: 0 0 5px 0
 
   // general content element styles
+  h2
+    line-height: 35px
+
+    +breakpoint($bp-small)
+      line-height: 32px
+      margin-bottom: $gutter
+
+
+  h2, h3, h4, h5, h6
+    code
+      font-size: 1.1em
+      font-weight: bold
+
   a
     color: $color-highlight
     &:hover
@@ -82,7 +95,7 @@
 
   code, kbd
     +font-stack-mono
-    font-size: 0.8em
+    font-size: 0.9em
     white-space: nowrap
 
   p code, li code, p kbd, li kbd
