@@ -18,4 +18,4 @@ description: KeywordBrain Insights Blog
         by
         %strong= article.author['name']
         on
-        %time{ datetime: article.date.strftime('%Y-%m-%d') }= friendly_date(article.date)
+        %time{ datetime: article.date.strftime('%Y-%m-%d') }= article.friendly_date

@@ -53,18 +53,17 @@ module KeywordBrainPatches
 
       author
     end
-  end
-end
 
-helpers do
-  def friendly_date(date)
-    time_format = if date.year == Time.now.year
-      "%B %d."
-    else
-      "%B %d, %Y."
+    # Nicer data format; only show year if it is not the current one
+    def friendly_date
+      time_format = if date.year == Time.now.year
+        '%B %d.'
+      else
+        '%B %d, %Y.'
+      end
+
+      date.strftime(time_format)
     end
-
-    date.strftime(time_format)
   end
 end
 

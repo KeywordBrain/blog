@@ -9,7 +9,7 @@
       .article__meta
         %strong= @article.author['name']
         wrote this on
-        %time{ datetime: @article.date.strftime('%Y-%m-%d') }= friendly_date(@article.date)
+        %time{ datetime: @article.date.strftime('%Y-%m-%d') }= @article.friendly_date
 
     = yield # article body will be rendered here
 
